@@ -1,0 +1,104 @@
+{
+    "restaurants":[
+    {
+    "id": "1",
+    "name": "Pamfilya",
+    "types": ["Veal"],
+    "address": {"street":"Luxemburgerstrasse 1","zipcode":13353,"area":"Wedding"},
+    "description": "First class meat, great bread, tiny amounts of sauce and great döner chefs",
+    "rating":5,
+    "primary_picture": "pamfilya_01.jpg",
+    "secondary_pictures": ["pamfilya_02.jpg","pamfilya_03-npi-b.jpg","pamfilya_03-npi.jpg"]
+    },
+    {
+    "id": "2",
+    "name": "Tadim",
+    "types": ["Veal"],
+    "address": {"street":"Adalbertstrasse 98","zipcode":10999,"area":"Kreuzberg"},
+    "description": "Tadim offers an unsurpassed mix of quality between the components of the Döner",
+    "rating":5,
+    "primary_picture": "tadim_01.jpg",
+    "secondary_pictures": ["tadim_02.jpg","tadim_03-npi.jpg"]
+    },
+ {
+    "id": "3",
+    "name": "Mustafas Gemüsekebap",
+    "types": ["Chicken"],
+    "address": {"street":"Mehringdamm 32","zipcode":10961,"area":"Kreuzberg"},
+    "description": "It is a truly great döner prepared with lots of care and precision",
+    "rating":4,
+    "primary_picture": "mustafas_01-npi.jpg",
+    "secondary_pictures": ["mustafas_02-npi.jpg","mustafas_03-npi.jpg"]
+    },
+ {
+    "id": "4",
+    "name": "Zweistrom",
+    "types": ["Falafel"],
+    "address": {"street":"Kollwitzstrasse 104","zipcode":10435,"area":"Prenzlauer Berg"},
+    "description": "The reason the Professor deem Zweistrom worthy of this listing is it's spectacular Falafels and their great sauces.",
+    "rating":5,
+    "primary_picture": "zweistrom_01-npi.jpg",
+    "secondary_pictures": ["zweistrom_02-npi.jpg"]
+    },
+ {
+    "id": "5",
+    "name": "Vöner",
+    "types": ["Vegetarian"],
+    "address": {"street":"Boxhagener Strasse 56","zipcode":10245,"area":"Friedrichshain"},
+    "description": "Why is it special? Because it's tasty.",
+    "rating":4,
+    "primary_picture": "voner_01-npi.jpg",
+    "secondary_pictures": ["voner_02-npi.jpg"]
+    },
+ {
+    "id": "6",
+    "name": "Bistro Bagdad",
+    "types": ["Veal","Chicken"],
+    "address": {"street":"Schlesische Strasse 2","zipcode":10997,"area":"Kreuzberg"},
+    "description": "Bagdad offers a lovely meat skewer and when the right guys are working it is really one of the tops in Berlin",
+    "rating":4,
+    "primary_picture": "doyum_1.jpg",
+    "secondary_pictures": ["doyum_1.jpg"]
+    },
+ {
+    "id": "7",
+    "name": "Doyum",
+    "types": ["Veal"],
+    "address": {"street":"Admiralstrasse 36-37","zipcode":10999,"area":"Kreuzberg"},
+    "description": "Because Doyum offers the best meat in Berlin",
+    "rating":5,
+    "primary_picture": "doyum_01-npi.jpg",
+    "secondary_pictures": ["doyum_1.jpg","doyum_2.jpg","doyum_02.jpg","doyum_03-npi.jpg","doyum_3.jpg","doyum_4.jpg"]
+    },
+ {
+    "id": "8",
+    "name": "Rüya",
+    "types": ["Chicken"],
+    "address": {"street":"Hauptstrasse 133","zipcode":10827,"area":"Schöneberg"},
+    "description": "Because it is Berlin chicken döner par excellence",
+    "rating":5,
+    "primary_picture": "ruya_01.jpg",
+    "secondary_pictures": ["ruya_02.jpg","ruya_03-npi.jpg"]
+    },
+ {
+    "id": "9",
+    "name": "Don Kebab",
+    "types": ["Marten"],
+    "address": {"street":"Knaackstrasse 98","zipcode":10435,"area":"Prenzlauer Berg"},
+    "description": "Because it is a fairly decent Martensdöner",
+    "rating":3,
+    "primary_picture": "don_kebab_01.jpg",
+    "secondary_pictures": ["don_kebab_01.jpg"]
+    },
+ {
+    "id": "10",
+    "name": "Doy Doy",
+    "types": ["Marten"],
+    "address": {"street":"Fichtelbergstrasse 5","zipcode":12685,"area":"Marzahn"},
+    "description": "Because it is an old acquaitance that don't let you down",
+    "rating":2,
+    "primary_picture": "doy_doy_01-npi.jpg",
+    "secondary_pictures": ["doy_doy_02-npi.jpg"]
+    }
+]
+}

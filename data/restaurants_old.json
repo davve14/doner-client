@@ -1,0 +1,44 @@
+{
+    "restaurants":[
+    {
+    "id": "1",
+    "name": "Pamfilya",
+    "types": ["Veal"],
+    "address": {"street":"street1","zipcode":10355,"area":"Mitte"},
+    "description": "a döner place with great meat",
+    "rating":3,
+    "primary_picture":"doyum.jpg",
+    "secondary_pictures":["doyum_1.jpg","doyum_2.jpg","doyum_3.jpg","doyum_4.jpg"]
+    },
+    {
+    "id": "2",
+    "name": "Bagdad",
+    "types": ["Veal","Marten"],
+    "address": {"street":"street1","zipcode":10355,"area":"Kreuzberg"},
+    "description": "a döner place with very good meat",
+    "rating":4,
+    "primary_picture":"doyum.jpg",
+    "secondary_pictures":["doyum_1.jpg","doyum_2.jpg","doyum_3.jpg","doyum_4.jpg"]
+    },
+    {
+    "id": "3",
+    "name": "Tadim Döner",
+    "types": ["Veal"],
+    "address": {"street":"street1","zipcode":10355,"area":"Kreuzberg"},
+    "description": "a super place",
+    "rating":5,
+    "primary_picture":"doyum.jpg",
+    "secondary_pictures":["doyum_1.jpg","doyum_2.jpg","doyum_3.jpg","doyum_4.jpg"]
+    },
+    {
+    "id": "4",
+    "name": "Doyum",
+    "types": ["Veal"],
+    "address": {"street":"street1","zipcode":10355,"area":"Kreuzberg"},
+    "description": "a döner place with great meat and nice people",
+    "rating":5,
+    "primary_picture":"doyum.jpg",
+    "secondary_pictures":["doyum_1.jpg","doyum_2.jpg","doyum_3.jpg","doyum_4.jpg"]
+    }
+  ]
+}
