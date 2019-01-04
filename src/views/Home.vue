@@ -5,7 +5,7 @@
       >
         <v-container fluid fill-height>
     <v-layout align-center justify-center>
-      <v-flex xs4>
+      <v-flex lg4 md6 xs12>
         <v-card raised>
           <v-toolbar card><v-toolbar-title class="font-weight-light">Find restaurants or simply start <router-link to="explore">exploring</router-link></v-toolbar-title></v-toolbar>
       <div class="ma-4">

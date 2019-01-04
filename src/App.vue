@@ -1,8 +1,34 @@
 <template>
   <v-app>
     <v-toolbar app flat>
+      <v-menu class="hidden-md-and-up">
+        <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+        <v-list>
+          <v-list-tile>
+            <v-list-tile-content>
+              <v-btn right flat href="/">
+                <span class="font-weight-light">Home</span>
+              </v-btn>
+            </v-list-tile-content>
+          </v-list-tile>
+          <v-list-tile>
+            <v-list-tile-content>
+              <v-btn right flat href="/explore">
+                <span class="font-weight-light">Explore</span>
+              </v-btn>
+            </v-list-tile-content>
+          </v-list-tile>
+          <v-list-tile>
+            <v-list-tile-content>
+              <v-btn right flat href="/map">
+                <span class="font-weight-light">Map</span>
+              </v-btn>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-menu>
       <v-toolbar-items>
-        <v-btn flat href="/">
+        <v-btn right flat href="/">
         <span class="headline">Berlin</span>
         <span class="headline font-weight-light">&nbsp;Döner Database</span>
         </v-btn>
