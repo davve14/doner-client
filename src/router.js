@@ -23,7 +23,8 @@ export default new Router({
       props: (route) => ({
         areas: route.query.areas,
         search: route.query.search,
-        globalFilterName: route.query.globalFilterName
+        globalFilterName: route.query.globalFilterName,
+        globalShowFilters: route.query.globalShowFilters
       })
     },
     {

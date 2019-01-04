@@ -88,7 +88,7 @@
 import restaurantsJson from '../../data/restaurants.json'
 
   export default {
-    props: ['areas','search','globalFilterName'],
+    props: ['globalFilterName','globalShowFilters'],
     data: () => ({
         restaurants: restaurantsJson.restaurants,
         filteredRestaurants: restaurantsJson.restaurants,
@@ -114,8 +114,7 @@ import restaurantsJson from '../../data/restaurants.json'
         
       },
       setFilterName() {
-        //alert(this.globalFilterName)
-        if (this.globalFilterName) {
+        if (this.globalFilterName||this.globalShowFilters) {
           this.showFilters = true
           this.filterName = this.globalFilterName
         } else {

@@ -7,14 +7,14 @@
     <v-layout align-center justify-center>
       <v-flex xs4>
         <v-card raised>
-          <v-toolbar card><v-toolbar-title class="font-weight-light">Find Restaurants</v-toolbar-title></v-toolbar>
+          <v-toolbar card><v-toolbar-title class="font-weight-light">Find restaurants or simply start <router-link to="explore">exploring</router-link></v-toolbar-title></v-toolbar>
       <div class="ma-4">
       <v-text-field @keyup.enter="redirectToSearch()" v-model="globalFilterName" class="font-weight-light"
         label="Search by Imbiß name"
       ></v-text-field>
-      <v-btn right small flat color="grey" @click="showFilters = !showFilters">
+      <v-btn right small flat color="grey" @click="redirectToAdvancedSearch()">
         <v-icon>search</v-icon>
-        <span class="caption text-capitalize font-weight-light">Advanced Search</span>
+        <span class="caption text-capitalize font-weight-light" >Advanced Search</span>
       </v-btn>
       </div>
       </v-card>
@@ -35,6 +35,9 @@
     methods: {
     redirectToSearch () {
       this.$router.push({path: 'explore', query: { globalFilterName: this.globalFilterName }})
+    },
+    redirectToAdvancedSearch () {
+      this.$router.push({path: 'explore', query: { globalFilterName: this.globalFilterName, globalShowFilters: true  }})
     }
     }
   }
