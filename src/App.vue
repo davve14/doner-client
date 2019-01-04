@@ -1,10 +1,12 @@
 <template>
   <v-app>
     <v-toolbar app flat>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Berlin</span>
-        <span class="font-weight-light"> Döner Database</span>
-      </v-toolbar-title>
+      <v-toolbar-items>
+        <v-btn flat href="/">
+        <span class="headline">Berlin</span>
+        <span class="headline font-weight-light">&nbsp;Döner Database</span>
+        </v-btn>
+      </v-toolbar-items>
     <v-toolbar-items class="ml-5 hidden-sm-and-down">
       <v-btn class="font-weight-light" href="/explore" flat>Explore</v-btn>
       <v-btn class="font-weight-light" href="/map" flat>Map</v-btn>
@@ -21,7 +23,7 @@
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
         target="_blank"
       >
-      <v-icon left>email</v-icon><span class="hidden-sm-and-down">Contact us</span>
+      <v-icon left>email</v-icon><span class="hidden-sm-and-down font-weight-light">Contact us</span>
       </v-btn>
     </v-toolbar-items>
     </v-toolbar> 
@@ -38,13 +40,16 @@ export default {
       },
   data () {
     return {
-      globalFilterName: '',
-      showFilters: ''
+      globalFilterName: ''
     }
   },
   methods: {
     redirectToSearch () {
-      alert(this.globalFilterName)
+      this.$router.push({path: 'explore', query: { globalFilterName: this.globalFilterName }})
+    }
+  },
+  watch: {
+    '$route' (to, from) {
     }
   }
 }

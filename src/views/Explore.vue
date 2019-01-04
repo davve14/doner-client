@@ -96,7 +96,7 @@ import restaurantsJson from '../../data/restaurants.json'
         showFilters: false,
         areaslist: ['Kreuzberg','Mitte'],
         typeslist: ['Veal','Marten','Chicken','Falafel','Vegetarian'],
-        
+        filterName: '',
         filterAreas: [],
         filterTypes: []
     }),
@@ -113,7 +113,16 @@ import restaurantsJson from '../../data/restaurants.json'
         }
         
       },
-      filterRestaurants(){
+      setFilterName() {
+        //alert(this.globalFilterName)
+        if (this.globalFilterName) {
+          this.showFilters = true
+          this.filterName = this.globalFilterName
+        } else {
+          this.showFilters = false
+        }
+      },
+      filterRestaurants() {
         
         let filtered = this.restaurants.filter((obj) => { return obj.name.toLowerCase().match(this.filterName.toLowerCase()) })
         
@@ -142,18 +151,19 @@ import restaurantsJson from '../../data/restaurants.json'
     computed: {
       
     },
-    watch: {
-      filterName: function() {
-      if (this.globalFilterName) {
-          this.showFilters = true
-          this.filterName = this.globalFilterName
-        } else {
-          this.showFilters = false
-        }
-      }  
+    mounted() {
+      
     },
     beforeMount(){
       this.sortedJson()
+      this.setFilterName()
+      this.filterRestaurants()
+    },
+    watch: {
+      globalFilterName: function(newVal, oldVal) {
+        this.setFilterName()
+        this.filterRestaurants()
+      }
     }
   }
 </script>
