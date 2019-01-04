@@ -42,7 +42,7 @@
       <v-btn class="font-weight-light" href="/map" flat>Map</v-btn>
       <v-btn class="font-weight-light" href="/about" flat>About</v-btn>
       <v-text-field @keyup.enter="redirectToSearch()" v-model="globalFilterName" class="mt-1 ml-5 font-weight-light"
-        label="SEARCH"
+        label="Search"
       ></v-text-field>
       <v-icon>search</v-icon>
     </v-toolbar-items>

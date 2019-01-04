@@ -94,7 +94,7 @@ import restaurantsJson from '../../data/restaurants.json'
         filteredRestaurants: restaurantsJson.restaurants,
         ratingStyle: '',
         showFilters: false,
-        areaslist: ['Kreuzberg','Mitte'],
+        areaslist: ['Friedrichshain','Kreuzberg','Marzahn','Mitte','Prenzlauer Berg','Schöneberg','Wedding'],
         typeslist: ['Veal','Marten','Chicken','Falafel','Vegetarian'],
         filterName: '',
         filterAreas: [],
