@@ -28,9 +28,13 @@
         </v-list>
       </v-menu>
       <v-toolbar-items>
-        <v-btn right flat href="/">
+        <v-btn class="hidden-sm-and-down" right flat href="/">
         <span class="headline">Berlin</span>
         <span class="headline font-weight-light">&nbsp;Döner Database</span>
+        </v-btn>
+        <v-btn class="hidden-md-and-up" right flat href="/">
+        <span class="headline">BER</span>
+        <span class="headline font-weight-light">&nbsp;Döner DB</span>
         </v-btn>
       </v-toolbar-items>
     <v-toolbar-items class="ml-5 hidden-sm-and-down">
@@ -80,3 +84,9 @@ export default {
   }
 }
 </script>
+<style>
+.wrapping {
+  white-space: normal;
+}
+
+</style>
