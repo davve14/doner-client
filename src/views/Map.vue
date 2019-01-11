@@ -1,19 +1,19 @@
 <template>
-
-
 <div>
   <mapbox
     access-token="pk.eyJ1IjoiZGF2dmUxNCIsImEiOiJjanFpZjVnYXgwNGF2NDJueHQzZGpoZ3IwIn0.nb0lYF98Ue-7Xt94vgXWkg"
     :map-options="{
     style: 'mapbox://styles/mapbox/light-v9',
     center: [13.378,52.516],
-    zoom: 12
+    zoom: 12,
     }"
+    @map-load="mapLoaded"
+    @map-click="mapClicked"
   ></mapbox>
   <v-container ma-0 pa-0 id="mapfilter">
   
     <v-layout>
-      <v-flex md3 sm6 xs12>
+      <v-flex md3 sm6 xs9>
     <v-form>
       <v-select
                 :items="areaslist"
@@ -45,7 +45,7 @@
     </v-layout>
   
 </v-container>
- </div>
+</div>
          
 
 </template>
@@ -54,6 +54,7 @@
 import mapStyle from '../../data/style.json';
 import geojs from '../../data/geo.json';
 import Mapbox from 'mapbox-gl-vue';
+import MapPopup from '../components/MapPopup.vue'
 
   export default {
     components: {
@@ -65,7 +66,54 @@ import Mapbox from 'mapbox-gl-vue';
       filterAreas: [],
       }},
     methods: {
+    mapLoaded(map) {
+      map.addLayer({
+        'id': 'points',
+        'type': 'symbol',
+        'source': {
+          'type': 'geojson',
+          'data': geojs
+        },
+        'layout': {
+          'icon-image': '{icon}-15',
+          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+          'text-offset': [0, 0.6],
+          'text-anchor': 'top'
+        }
+      });
+    },
+    mapClicked(map, e) {
+      this.addPopUp(map, e);
+    },
+    mapMouseMoved(map, e) {
+      const features = map.queryRenderedFeatures(e.point, {
+        layers: ['points']
+      });
+      map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+    },
+    addPopUp(map, e) {
+      const features = map.queryRenderedFeatures(e.point, {
+        layers: ['points']
+      });
+      if (!features.length) {
+        return;
+      }
+      
+      const feature = features[0];
+      const popupContent = Vue.extend(MapPopup);
+
+      // Populate the popup and set its coordinates
+      // based on the feature found.
+      const popup = new mapboxgl.Popup()
+        .setLngLat(feature.geometry.coordinates)
+        .setHTML('<div id="vue-popup-content"></div>')
+        .addTo(map);
+
+      new popupContent({
+          propsData: { title: feature.properties.title }
+      }).$mount('#vue-popup-content');
     }
+  }
   }
 </script>
 <style scoped>
