@@ -5,7 +5,6 @@ import router from './router'
 
 Vue.config.productionTip = false
 
-
 Vue.filter('snippet',function(value){
   return value.slice(0,100) + '...'
 })

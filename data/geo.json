@@ -1,0 +1,33 @@
+{
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "title": "Brandenburger Tor",
+          "description": "Brandenburger Tor"
+        },
+        "geometry": {
+          "coordinates": [
+            13.378,
+            52.516
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "title": "Brandenburger Tor",
+          "description": "Brandenburger Tor"
+        },
+        "geometry": {
+          "coordinates": [
+            52.516,
+            13.378
+          ],
+          "type": "Point"
+        }
+      }
+    ],
+    "type": "FeatureCollection"
+}
