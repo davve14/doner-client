@@ -3,28 +3,29 @@
   <mapbox
     access-token="pk.eyJ1IjoiZGF2dmUxNCIsImEiOiJjanFpZjVnYXgwNGF2NDJueHQzZGpoZ3IwIn0.nb0lYF98Ue-7Xt94vgXWkg"
     :map-options="{
-    style: 'mapbox://styles/mapbox/light-v9',
+    style: 'mapbox://styles/davve14/cjqzhkzw52cw92rs1nhiub7xg',
     center: [13.378,52.516],
     zoom: 12,
     }"
     @map-load="mapLoaded"
     @map-click="mapClicked"
   ></mapbox>
-  <v-container ma-0 pa-0 id="mapfilter">
+
   
-    <v-layout>
-      <v-flex md3 sm6 xs9>
+
+      <v-flex md3 sm6 xs9 ma-0 pa-0 id="mapfilter">
     <v-form>
       <v-select
-                :items="areaslist"
-                v-model="filterAreas"
+                :items="typesList"
+                v-model="filterTypes"
                 menu-props="{ maxHeight: '400'}"
-                label="Select areas"
+                label="Select types"
                 multiple
                 background-color="white"
                 solo-inverted
                 dense
                 flat
+                @change=runFilterTypes()
       >
         <template
           slot="selection"
@@ -36,15 +37,15 @@
           <span
             v-if="index === 1"
             class="grey--text caption"
-          >(+{{ filterAreas.length - 1 }} others)
+          >(+{{ filterTypes.length - 1 }} others)
           </span>
         </template>
       </v-select>
     </v-form>
     </v-flex>
-    </v-layout>
+
   
-</v-container>
+
 </div>
          
 
@@ -52,36 +53,74 @@
 
 <script>
 import mapStyle from '../../data/style.json';
-import geojs from '../../data/geo.json';
 import Mapbox from 'mapbox-gl-vue';
 import MapPopup from '../components/MapPopup.vue'
+import restaurantsJson from '../../data/restaurants.json'
 
   export default {
     components: {
       Mapbox
     },
-    data() {
-    return {
-      areaslist: ['Friedrichshain','Kreuzberg','Marzahn','Mitte','Prenzlauer Berg','Schöneberg','Wedding'],
-      filterAreas: [],
-      }},
+    data: () => ({
+      typesList: ['Veal','Marten','Chicken','Falafel','Vegetarian'],
+      filterTypes: [],
+      geojson : {},
+      filteredGeojson: {}
+      }),
     methods: {
     mapLoaded(map) {
-      map.addLayer({
-        'id': 'points',
-        'type': 'symbol',
-        'source': {
-          'type': 'geojson',
-          'data': geojs
-        },
-        'layout': {
-          'icon-image': '{icon}-15',
-          'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-          'text-offset': [0, 0.6],
-          'text-anchor': 'top'
-        }
-      });
+      this.map=map
+      
+        
+        
+        map.addSource('trace', { type: 'geojson', data: this.filteredGeojson })
+        map.addLayer({
+          'id': 'points',
+          'type': 'symbol',
+          'source': 'trace',
+          'layout': {
+            'icon-image': '{icon}-15',
+            'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
+            'text-offset': [0, 0.6],
+            'text-anchor': 'top'
+          }
+        })
+      
     },
+    buildGeoJson(){
+      const newRest = restaurantsJson.restaurants.map(function(restaurant){
+        return {
+          "type": "Feature",
+          "properties": {
+            "title": restaurant.name,
+            "description": restaurant.description,
+            "icon": "restaurant",
+            "types": restaurant.types,
+            "restId": restaurant.id
+          },
+          "geometry": {
+            "coordinates": restaurant.coordinates,
+            "type": "Point"
+          }
+        }
+      })
+      this.geojson = { "features": newRest, "type": "FeatureCollection" }
+      this.filteredGeojson = { "features": newRest, "type": "FeatureCollection" }
+      
+      },
+      runFilterTypes(){
+        var filterer = this.filterTypes
+        var filtered = this.geojson.features.filter(function(feature){
+          return feature.properties.types.some(function(type){
+            return filterer.some(function(filterType){
+              return type.match(filterType)
+            })
+          })
+        })
+        this.filteredGeojson = { "features": filtered, "type": "FeatureCollection" }
+
+        this.map.getSource('trace').setData(this.filteredGeojson);
+      },
     mapClicked(map, e) {
       this.addPopUp(map, e);
     },
@@ -101,7 +140,6 @@ import MapPopup from '../components/MapPopup.vue'
       
       const feature = features[0];
       const popupContent = Vue.extend(MapPopup);
-
       // Populate the popup and set its coordinates
       // based on the feature found.
       const popup = new mapboxgl.Popup()
@@ -110,16 +148,26 @@ import MapPopup from '../components/MapPopup.vue'
         .addTo(map);
 
       new popupContent({
-          propsData: { title: feature.properties.title }
+          propsData: {
+            restaurantTitle: feature.properties.title,
+            restaurantId: feature.properties.restId,
+            restaurantTypes: feature.properties.types
+          }
       }).$mount('#vue-popup-content');
     }
+  },
+  beforeMount(){
+    this.buildGeoJson()
+  },
+  created(){
+    this.map = null;
   }
   }
 </script>
 <style scoped>
 #map {
   width: 100%;
-  height: 500px;
+  height: 650px;
   position: relative;
 }
 #mapfilter{

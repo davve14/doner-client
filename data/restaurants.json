@@ -8,7 +8,11 @@
     "description": "First class meat, great bread, tiny amounts of sauce and great döner chefs",
     "rating":5,
     "primary_picture": "pamfilya_01.jpg",
-    "secondary_pictures": ["pamfilya_02.jpg","pamfilya_03-npi-b.jpg","pamfilya_03-npi.jpg"]
+    "secondary_pictures": ["pamfilya_02.jpg","pamfilya_03-npi-b.jpg","pamfilya_03-npi.jpg"],
+    "coordinates": [
+      13.3562958,
+      52.5462162
+    ]
     },
     {
     "id": "2",
@@ -18,7 +22,11 @@
     "description": "Tadim offers an unsurpassed mix of quality between the components of the Döner",
     "rating":5,
     "primary_picture": "tadim_01.jpg",
-    "secondary_pictures": ["tadim_02.jpg","tadim_03-npi.jpg"]
+    "secondary_pictures": ["tadim_02.jpg","tadim_03-npi.jpg"],
+    "coordinates": [
+      13.3377867,
+      52.4964097
+    ]
     },
  {
     "id": "3",
@@ -28,7 +36,11 @@
     "description": "It is a truly great döner prepared with lots of care and precision",
     "rating":4,
     "primary_picture": "mustafas_01-npi.jpg",
-    "secondary_pictures": ["mustafas_02-npi.jpg","mustafas_03-npi.jpg"]
+    "secondary_pictures": ["mustafas_02-npi.jpg","mustafas_03-npi.jpg"],
+    "coordinates": [
+      13.3858476,
+      52.4938222
+    ]
     },
  {
     "id": "4",
@@ -38,7 +50,11 @@
     "description": "The reason the Professor deem Zweistrom worthy of this listing is it's spectacular Falafels and their great sauces.",
     "rating":5,
     "primary_picture": "zweistrom_01-npi.jpg",
-    "secondary_pictures": ["zweistrom_02-npi.jpg"]
+    "secondary_pictures": ["zweistrom_02-npi.jpg"],
+    "coordinates": [
+      13.4194682,
+      52.53924
+    ]
     },
  {
     "id": "5",
@@ -48,7 +64,11 @@
     "description": "Why is it special? Because it's tasty.",
     "rating":4,
     "primary_picture": "voner_01-npi.jpg",
-    "secondary_pictures": ["voner_02-npi.jpg"]
+    "secondary_pictures": ["voner_02-npi.jpg"],
+    "coordinates": [
+      13.4679481,
+      52.5068572
+    ]
     },
  {
     "id": "6",
@@ -58,7 +78,11 @@
     "description": "Bagdad offers a lovely meat skewer and when the right guys are working it is really one of the tops in Berlin",
     "rating":4,
     "primary_picture": "doyum_1.jpg",
-    "secondary_pictures": ["doyum_1.jpg"]
+    "secondary_pictures": ["doyum_1.jpg"],
+    "coordinates": [
+      13.4400314,
+      52.5006887
+    ]
     },
  {
     "id": "7",
@@ -68,7 +92,11 @@
     "description": "Because Doyum offers the best meat in Berlin",
     "rating":5,
     "primary_picture": "doyum_01-npi.jpg",
-    "secondary_pictures": ["doyum_1.jpg","doyum_2.jpg","doyum_02.jpg","doyum_03-npi.jpg","doyum_3.jpg","doyum_4.jpg"]
+    "secondary_pictures": ["doyum_1.jpg","doyum_2.jpg","doyum_02.jpg","doyum_03-npi.jpg","doyum_3.jpg","doyum_4.jpg"],
+    "coordinates": [
+      13.4151502,
+      52.4982593
+    ]
     },
  {
     "id": "8",
@@ -78,7 +106,11 @@
     "description": "Because it is Berlin chicken döner par excellence",
     "rating":5,
     "primary_picture": "ruya_01.jpg",
-    "secondary_pictures": ["ruya_02.jpg","ruya_03-npi.jpg"]
+    "secondary_pictures": ["ruya_02.jpg","ruya_03-npi.jpg"],
+    "coordinates": [
+      13.3517933,
+      52.4847076
+    ]
     },
  {
     "id": "9",
@@ -88,17 +120,11 @@
     "description": "Because it is a fairly decent Martensdöner",
     "rating":3,
     "primary_picture": "don_kebab_01.jpg",
-    "secondary_pictures": ["don_kebab_01.jpg"]
-    },
- {
-    "id": "10",
-    "name": "Doy Doy",
-    "types": ["Marten"],
-    "address": {"street":"Fichtelbergstrasse 5","zipcode":12685,"area":"Marzahn"},
-    "description": "Because it is an old acquaitance that don't let you down",
-    "rating":2,
-    "primary_picture": "doy_doy_01-npi.jpg",
-    "secondary_pictures": ["doy_doy_02-npi.jpg"]
+    "secondary_pictures": ["don_kebab_01.jpg"],
+    "coordinates": [
+      13.412477,
+      52.540324
+    ]
     }
 ]
 }
