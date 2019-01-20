@@ -1,12 +1,15 @@
 <template>
 <div>
-    <v-card flat class="mr-3 mt-2 ml-1" :href="/restaurant/ + restaurantId">
-            <v-card-title primary-title>
-              <div>
-                <span class="title mb-0 grey--text text--darken-1">{{restaurantTitle}}</span><br>
-                <v-chip outline small v-for="(type) in restaurantTypes" >{{type}}</v-chip>
-              </div>
+    <v-card flat class="mr-2 mt-2 ml-1" :href="/restaurant/ + restaurantId">
+            <v-card-title primary-title class="pa-1">
+              
+                <span class="font-weight-light title mt-0 mb-0 grey--text text--darken-1">{{restaurantTitle}}</span><br>
+                
+              
             </v-card-title>
+            <v-card-actions class="py-2 px-1">
+                <v-chip outline small v-for="(type) in restaurantTypes" >{{type}}</v-chip>
+            </v-card-actions>
           </v-card> 
           </div>
 </template>
@@ -24,7 +27,6 @@ export default {
             .replace(/\[/i, "")
             .split(',')
         }
-        
     },
     beforeMount(){
             this.splitToArray()

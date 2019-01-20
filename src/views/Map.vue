@@ -10,45 +10,36 @@
     @map-load="mapLoaded"
     @map-click="mapClicked"
   ></mapbox>
-
-  
-
-      <v-flex md3 sm6 xs9 ma-0 pa-0 id="mapfilter">
+  <v-flex md3 sm6 xs9 ma-0 pa-0 id="mapfilter">
     <v-form>
       <v-select
-                :items="typesList"
-                v-model="filterTypes"
-                menu-props="{ maxHeight: '400'}"
-                label="Select types"
-                multiple
-                background-color="white"
-                solo-inverted
-                dense
-                flat
-                @change=runFilterTypes()
+        :items="typesList"
+        v-model="filterTypes"
+        menu-props="{ maxHeight: '400'}"
+        label="Select types"
+        multiple
+        background-color="white"
+        solo-inverted
+        dense
+        flat
+        @change=runFilterTypes()
       >
-        <template
-          slot="selection"
-          slot-scope="{ item, index }"
+        <div
+            slot="selection"
+            slot-scope="{ item, index }"
         >
-          <v-chip small v-if="index === 0">
-            <span>{{ item }}</span>
-          </v-chip>
-          <span
-            v-if="index === 1"
-            class="grey--text caption"
-          >(+{{ filterTypes.length - 1 }} others)
-          </span>
-        </template>
+        <v-chip small v-if="index === 0">
+          <span>{{ item }}</span>
+        </v-chip>
+        <span
+          v-if="index === 1"
+          class="grey--text caption"
+        >(+{{ filterTypes.length - 1 }} others)</span>
+        </div>
       </v-select>
     </v-form>
-    </v-flex>
-
-  
-
+  </v-flex>
 </div>
-         
-
 </template>
 
 <script>
@@ -70,22 +61,15 @@ import restaurantsJson from '../../data/restaurants.json'
     methods: {
     mapLoaded(map) {
       this.map=map
-      
-        
-        
         map.addSource('trace', { type: 'geojson', data: this.filteredGeojson })
         map.addLayer({
           'id': 'points',
           'type': 'symbol',
           'source': 'trace',
           'layout': {
-            'icon-image': '{icon}-15',
-            'text-font': ['Open Sans Semibold', 'Arial Unicode MS Bold'],
-            'text-offset': [0, 0.6],
-            'text-anchor': 'top'
+            'icon-image': '{icon}'
           }
         })
-      
     },
     buildGeoJson(){
       const newRest = restaurantsJson.restaurants.map(function(restaurant){
@@ -94,7 +78,7 @@ import restaurantsJson from '../../data/restaurants.json'
           "properties": {
             "title": restaurant.name,
             "description": restaurant.description,
-            "icon": "restaurant",
+            "icon": "doner_marker_grey",
             "types": restaurant.types,
             "restId": restaurant.id
           },
@@ -106,7 +90,6 @@ import restaurantsJson from '../../data/restaurants.json'
       })
       this.geojson = { "features": newRest, "type": "FeatureCollection" }
       this.filteredGeojson = { "features": newRest, "type": "FeatureCollection" }
-      
       },
       runFilterTypes(){
         var filterer = this.filterTypes
@@ -118,7 +101,6 @@ import restaurantsJson from '../../data/restaurants.json'
           })
         })
         this.filteredGeojson = { "features": filtered, "type": "FeatureCollection" }
-
         this.map.getSource('trace').setData(this.filteredGeojson);
       },
     mapClicked(map, e) {
@@ -137,12 +119,11 @@ import restaurantsJson from '../../data/restaurants.json'
       if (!features.length) {
         return;
       }
-      
       const feature = features[0];
       const popupContent = Vue.extend(MapPopup);
       // Populate the popup and set its coordinates
       // based on the feature found.
-      const popup = new mapboxgl.Popup()
+      const popup = new mapboxgl.Popup({className: 'popups'})
         .setLngLat(feature.geometry.coordinates)
         .setHTML('<div id="vue-popup-content"></div>')
         .addTo(map);
@@ -164,16 +145,19 @@ import restaurantsJson from '../../data/restaurants.json'
   }
   }
 </script>
-<style scoped>
+<style>
 #map {
   width: 100%;
-  height: 650px;
+  height: 600px;
   position: relative;
 }
-#mapfilter{
-    position: absolute;
-    top: 10px;
-    left: 10px;
+#mapfilter {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+button.mapboxgl-popup-close-button {
+  padding: 0px 8px 0px 8px;
 }
 </style>
 
