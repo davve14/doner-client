@@ -6,7 +6,7 @@
         <v-list>
           <v-list-tile>
             <v-list-tile-content>
-              <v-btn active right flat href="/">
+              <v-btn right flat href="/">
                 <span class="font-weight-light">Home</span>
               </v-btn>
             </v-list-tile-content>
