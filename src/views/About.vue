@@ -9,7 +9,7 @@
           description of the dishes easier. You can read all about it right here!
         </p>
 
-        <h2 class="title">About Veal Döner</h2>
+        <h2 class="title">About the Veal Döner</h2>
         <v-layout row wrap>
           <v-flex xs12 md6>
         <p>
