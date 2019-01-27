@@ -1,42 +1,43 @@
 <template>
   <div class="about">
     <v-container style="width:960px;">
-      <article>
-    <h1 class="headline"> About The Berlin Döner Database</h1>
+      
+        <h1 class="headline">About The Berlin Döner Database</h1>
+        <p>
+          Since the definitions of what is a Döner kebab can vary so very much, we had a workshop here at 
+          the International Berlin Döner Database and came up with a couple of categories that make the 
+          description of the dishes easier. You can read all about it right here!
+        </p>
 
-
-<p>
-Since the definitions of what is a Döner kebab can vary so very much, we had a workshop here at 
-the International Berlin Döner Database and came up with a couple of categories that make the 
-description of the dishes easier. You can read all about it right here!
-</p>
-
-<h2 class="title">About Veal Fladen</h2>
-<div class="img_container">
-
-<p>
-The Veal döner pivots around the veal meat, which, in turn, pivots around a skewer while being 
-cooked rotisserie style. The meat is later carved of in thin shavings and put inside a sandwich 
-together with vegetables (usually some combination of tomatoes, cucumber, onions, lettuce and 
-cabbage), sauces (traditionally kräuter (herbs), knoblauch (garlic) and scharf (hot)) and a bread 
-(usually Fladen brot (thicker) or dürüm (thinner)).
- Veal is the meat from the calf, aka the baby cow. The meat from the mama and the papa cow is 
-called beef. Veal Döner meat is usually chunks of meat – sorta like steaks – piled onto each other, 
-seasoned, and grilled rotisserie-style (ie slowly). The meat is then carved out from the cylindrical 
-tower of steaks in thin shavings. <br><br>
-Cooking the meat in this way, and with just the right touch, can turn out to be an unprecedented 
-meat experience where the meat is juicy and strong in flavor. Generally, the best Döners follow this 
-tradition. Leading examples are Doyum Döner, Pamfilya and Tadim. There are plenty of other 
-choices, so make sure to do your reserach properly before making a spontaneous street dinner 
-reservation. Luckily you have come to the right place, as you can do this research right here!
-</p>
-
+        <h2 class="title">About Veal Döner</h2>
+        <v-layout row wrap>
+          <v-flex xs12 md6>
+        <p>
+          The Veal döner pivots around the veal meat, which, in turn, pivots around a skewer while being 
+          cooked rotisserie style. The meat is later carved off in thin shavings and put inside a sandwich 
+          together with vegetables (usually some combination of tomatoes, cucumber, onions, lettuce and 
+          cabbage), sauces (traditionally kräuter (herbs), knoblauch (garlic) and scharf (hot)) and a bread 
+          (usually Fladen brot (thicker) or dürüm (thinner)).
+          Veal is the meat from the calf, aka the baby cow. The meat from the mama and the papa cow is 
+          called beef. Veal Döner meat is usually chunks of meat – sorta like steaks – piled onto each other, 
+          seasoned, and grilled rotisserie-style (ie slowly). The meat is then carved out from the cylindrical 
+          tower of steaks in thin shavings.
+          <br><br>
+          Cooking the meat in this way, and with just the right touch, can turn out to be an unprecedented 
+          meat experience where the meat is juicy and strong in flavor. Generally, the best Döners follow this 
+          tradition. Leading examples are Doyum Döner, Pamfilya and Tadim. There are plenty of other 
+          choices, so make sure to do your reserach properly before making a spontaneous street dinner 
+          reservation. Luckily you have come to the right place, as you can do this research right here!
+        </p>
+</v-flex>
+<v-flex xs12 md6>
 <figure class="figure_wrapp">
         <v-img :src="require('@/assets/tadim_spett.png')" width="400" aspect-ratio="1" alt="Tadim Döner">
         </v-img>
         <figcaption>Tadim - Veal Döner in Berlin, Kreuzberg</figcaption>
       </figure>
-</div>
+ </v-flex>     
+</v-layout>
 <h2 class="title">About Mârten Döner</h2>
 
 <p>
@@ -116,7 +117,7 @@ vegetarian Döner. But that type of sandwich has been honored with its own categ
 look into other, often innovative, versions of the Döner sandwich. Like our friends down at Vöner. 
 
 Brilliant.
-</article>
+
 </v-container>
 
   </div>
@@ -124,9 +125,7 @@ Brilliant.
 </template>
 
 <style>
-.img_container {
-  display: flex;  
-}
+
 .figure_wrapp {
   padding:5px;
 }
