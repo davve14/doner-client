@@ -5,13 +5,26 @@
     "name": "Pamfilya",
     "types": ["Veal"],
     "address": {"street":"Luxemburgerstrasse 1","zipcode":13353,"area":"Wedding"},
-    "description": "First class meat, great bread, tiny amounts of sauce and great döner chefs",
+    "short_description": "First class meat, great bread, tiny amounts of sauce and great döner chefs",
+    "long_description": {
+      "befores": ["Pamfilya is a Ocakbaci (Turkish grill restaurant) located in north Wedding far from the fancy, edgy         blocks you, dear potential visitor, probably frequents. But why not put in a visit to something                 different? Pamfilya is worth the trip.",
+                  "Pamfilya offers a simple and tasty no-frills veal Döner with some of Berlin's best meats. According                   to the Professor this is how every Döner in Berlin could & should taste. A special slow clap goes                                     out to their chefs who appreciate the accute un-need for the fatty tasteless sauce when 1) the meat is                                    of proper quality, 2) and grilled properly, 3) the bread is paper-thin, and 4) the condiments are in                                     just the right proportions to the amount of meat.",
+                  "At this particular taste juncture very little sauce is needed. One of the talents at Pamfilya personally                   demonstrated this to the Professor, adding just a minor touch of sauce  and some chili flakes.                                     Perfection.",
+                  "On a general note, when at its best the meat will provide most (if not all) of the moisture in the dish.                  When meat is sterling, you theoretically only need some seasoning. The professor could go off at                                     lenghts here, paraphrasing a lecture given by Hestor Blumenthal about this very subject. But we                                     will save that for another day."],
+      "structure":{
+        "meat":"Slightly below Doyum and on par with Tadim.",
+        "sauce":"Not really great (as with any Döner vendor) but tastefully kept to a minimum.",
+        "condiments":"All you can expect and applied in proper proportions compared to the meat.",
+        "bread":"Very good, particularly when grilled hard so that there's barely more than the crust         remaining."
+      },
+      "afters": ["Consistency of the Döner delivery. Sometimes the Professor goes into fits of joy outside this         vendor, wiping a tear over the fantastic quality of this Döner. Other times, though, it's a bit meh. All                that is needed is here though."]
+    },
     "rating":5,
     "primary_picture": "pamfilya_01.jpg",
     "secondary_pictures": ["pamfilya_02.jpg","pamfilya_03-npi-b.jpg","pamfilya_03-npi.jpg"],
     "coordinates": [
-      13.3562958,
-      52.5462162
+      13.3584709,
+      52.5462067
     ]
     },
     {
@@ -19,7 +32,18 @@
     "name": "Tadim",
     "types": ["Veal"],
     "address": {"street":"Adalbertstrasse 98","zipcode":10999,"area":"Kreuzberg"},
-    "description": "Tadim offers an unsurpassed mix of quality between the components of the Döner",
+    "short_description": "Tadim offers an unsurpassed mix of quality between the components of the Döner",
+    "long_description": {
+      "befores": ["Tadim is sort of like the elegant fundament of Döners in Berlin. Located at Kottbusser Tor, the heart of all Turkish in Berlin, Tadim has successfully maintained a position at the top of the Dönerbudens for what adds upp to several decades at this point.",
+                 "Tadim offers an unsurpassed quality in the mix between the components of a Döner; the meat, the sauce, the condiments and the bread. The components are, without exception, served with great care and attention to detail. The meals offered at Tadim are well-balanced, and the components themselves are first class; starting with the meat which is in the top three among the competition in old Brandenburg."],
+      "structure":{
+        "meat":"Tadim offers one of the best meats available in Berlin today. It's a classic veal skewer with juicy meat tended by some of the best Döner skewer masters available in Berlin.",
+        "sauce":"Standard mediocre offering of sauces - but tastefully applied in combination with the other components.",
+        "condiments":"Crisp condiments perfectly complementing the meat base. Tadim offers no cabbage which creates a slightly lighter and less filling Döner.",
+        "bread":"Tadim grills their Fladenbrot hard which creates a perfect vessel for your ingredients. Bonus points for baking their own Dürum bread as well as their own Lahmacuns (Turkish pizza)."
+      },
+      "afters": ["Tadim being the current favourite of the Professor, it's already implied all the building blocks are here and of exceptional quality. If I, your Professor Imbiss, would make a humble suggestion, it would be to experiment and develop other sauces. The sauces, albeit being among the better compared to other Dönerbudens, are really not that good on a stand-alone basis. They are fatty, mayonnaise-based sauces (except the scharf, which the Professor assumes is some ketchup/chili hybrid) without any particular elegance. The Professor would also suggest that these obviously very talented Döner bakers expirement with the Fladenbrot to come up with an even crisper bread."]
+    },
     "rating":5,
     "primary_picture": "tadim_01.jpg",
     "secondary_pictures": ["tadim_02.jpg","tadim_03-npi.jpg"],
@@ -33,13 +57,25 @@
     "name": "Mustafas Gemüsekebap",
     "types": ["Chicken"],
     "address": {"street":"Mehringdamm 32","zipcode":10961,"area":"Kreuzberg"},
-    "description": "It is a truly great döner prepared with lots of care and precision",
+    "short_description": "It is a truly great döner prepared with lots of care and precision",
+    "long_description": {
+      "befores": ["Mustafas is the rather clear front runner of the Dönerbudens in Berlin. As long as they're open for business, you will at any given point find a line of about 50m outside the tiny cart where Mustafa runs his Döner empire. Mustafa, obviously a marketing whizz, has managed to get into every single guide book ever written about Berlin. This is in addition to being mentioned in every semi-lazy food-blog discussing the Döner and/or Imbiss scene of Berlin. Why semi-lazy? Mustafa's Gemüse Kebap is good, but it is not that good compared to what competitors are offering.",
+                  "Mustafa serves a truly great Döner prepared with lots of care and precision. It is a concept countless other Imbisses have tried to mimic with mostly dissappointing results (but with some exceptions)."],      
+      "structure":{
+        "meat":"Chicken meat gilded with oil and spices.",
+        "sauce":"You'll find the three sauces most other Dönerimbisses serve; Kräuter, Knoblauch and Scharf. These sauces have most of the usual disadvantages: fatty and without much flavor. As a quality Döner outlet they apply the sauces delicately though.",
+        "condiments":"This is the area where Mustafa excels. Being one of the pioneers of the Gemüse kebab, Mustafa has introduced sautéed veggies (the ”Gemüse” part of the Gemüse kebab), the goat cheese (”white cheese” or turkish feta cheese), added oil and spices, and finally a twist of lemon. Not a lot of other imbisses put Mustafa's amount love into their condiments and it shows.",
+        "bread":"Another aspect Mustafa has pioneered is innovative use of the bread. It is rather closer to a traditional bun than a Fladenbrot; best described as a cross between a pita bread and a burger bun."
+      },
+      "afters": ["Attention to detail is what keeps Mustafa at the top. Every Döner coming out of this Imbiss' window is – according to the Professor's research – prepared with love and attention. However, the sauces are not as good as we would hope for (and our hopes surely keep Mustafa up at night).",
+                "Also, a message to the hordes of tourists being into Mustafa's massive line: You will not be dissappointed. However, the same can be said for some of the alternatives the Professor has listed at 4 or above on this site."]
+    },
     "rating":4,
     "primary_picture": "mustafas_01-npi.jpg",
     "secondary_pictures": ["mustafas_02-npi.jpg","mustafas_03-npi.jpg"],
     "coordinates": [
-      13.3858476,
-      52.4938222
+      13.3880247664789,
+      52.4938112
     ]
     },
  {
@@ -47,13 +83,23 @@
     "name": "Zweistrom",
     "types": ["Falafel"],
     "address": {"street":"Kollwitzstrasse 104","zipcode":10435,"area":"Prenzlauer Berg"},
-    "description": "The reason the Professor deem Zweistrom worthy of this listing is it's spectacular Falafels and their great sauces.",
+    "short_description": "The reason the Professor deem Zweistrom worthy of this listing is it's spectacular Falafels and their great sauces.",
+    "long_description": {
+      "befores": ["Zweistrom is a Falafel, Schawarma and \"generally tasty vegetarian items\" place. There are a bunch of different things that make Zweistrom a special place. The reason the Professor deems Zweistrom worthy of this listing is the spectacular Falafels and the great sauces. On a slightly off-topic note they also offer great vegetarian plates of assorted veggie goodies."],
+      "structure":{
+        "meat":"The Falafel offered here at Zweistrom is one of the best the Professor ever had the priviliege of tasting. Really spectacular stuff. Made on the spot from a Falafel dough (is that the proper term?) and later fried. It is truly something extra.",
+        "sauce":"The sauces offered at Zweistrom are something extra. Or possibly not something extra and just what you might expect. It's really goddamn good though. Lean sauces packed with flavour. The Professor isn't sure what they've mixed into these but they are a helluva lotmore interesting than the stuff offered in other locations. ",
+        "condiments":"Good quality veggies tastefully distributed throughout the Falafel roll.",
+        "bread":"Zweistrom use a type of bread similar to the Dürum, but wrapped semi-open – a bit like a Mexican taco. It suits its purpose perfectly."
+      },
+      "afters": ["In the Falalfel game there's really little room for improvement in the Professor's opinion. The Professor dares anyone to challenge that assumption though! However, someday the Professor will schedule time to try the Schawarma offered here and see if it's as delicous as the Falafel. It will be of particular interest to see if it offers a cure to fatty mayonnaise-based sauces of all the Döner Imbisses."]
+    },
     "rating":5,
     "primary_picture": "zweistrom_01-npi.jpg",
     "secondary_pictures": ["zweistrom_02-npi.jpg"],
     "coordinates": [
-      13.4194682,
-      52.53924
+      13.4215804,
+      52.5392225
     ]
     },
  {
@@ -61,7 +107,17 @@
     "name": "Vöner",
     "types": ["Vegetarian"],
     "address": {"street":"Boxhagener Strasse 56","zipcode":10245,"area":"Friedrichshain"},
-    "description": "Why is it special? Because it's tasty.",
+    "short_description": "Why is it special? Because it's tasty.",
+    "long_description": {
+      "befores": ["Vöner is a vegetarian, or really vegan, alternative to the Döners offered at other spots. (Well, there         are vegetarian options in most other places as well, and let's not forget Falafel is an intrinsically                 vegetarian or even vegan option.) What makes Vöner a bit special in the Imbiss universe is that few                 other places have given any particular thought to the vegetarian option (except possibly the Falafel                 places). This is something we would like to celebrate and encourage."],
+      "structure":{
+        "meat":"The Döner at Vöner is based solely on non-animal components and is composed of a         bunch of vegetables or with Seitan (a vegetarian protein based on wheat. Rich in gluten –                 Boo! – but poor in carbohydrates – Yeah!)",
+        "sauce":"The sauces offered here are OK.",
+        "condiments":"The condiments are tastefully applied veggies.",
+        "bread":"The bread is classic Fladenbrot with all the trappings. Very good."
+      },
+      "afters": ["While Vöner is a favourite of the Professor's, there are countless ways you could develop this         concept. You could, for example, look at Rutabaga (of Mathias Dahlgren fame) for inspriation on                 variations of different bases and sauces to build the sandwich around."]
+    },
     "rating":4,
     "primary_picture": "voner_01-npi.jpg",
     "secondary_pictures": ["voner_02-npi.jpg"],
@@ -75,13 +131,24 @@
     "name": "Bistro Bagdad",
     "types": ["Veal","Chicken"],
     "address": {"street":"Schlesische Strasse 2","zipcode":10997,"area":"Kreuzberg"},
-    "description": "Bagdad offers a lovely meat skewer and when the right guys are working it is really one of the tops in Berlin",
+    "short_description": "Bagdad offers a lovely meat skewer and when the right guys are working it is really one of the tops in Berlin",
+    "long_description": {
+      "befores": ["Bistro Bagdad is an Imbiss located at the end of Schlesisches Strasse. Here, in the dim and distant         beginning of the Professor's travels into the metaphysical Döner-world of Berlin, the Professor                 found a humble Döner joint. It turned out this Imbiss served an absolutely lovely veal skewer,                 which became the Professor's introduction to this lovely variation in Berlin. The Professor had                 experienced the veal skewers of cities like Hamburg and was quite frankly a bit surprised when                 arriving to Berlin and finding it was not as common in the Döner capital of the world.",
+                  "Bagdad offers a lovely meat skewer and when the right guys are in place working away – for                   example the man the Professor believes to be Mr Bagdad himself – it is really a top-notch Döner.                                     However, it is not uncommon that undisciplined amateurs tend the shop (particularly at night) and                                     they do not pay the proper attention when composing our beloved sandwich."],
+      "structure":{
+        "meat":"Veal of a quality right below the top 3 candidates on this list.",
+        "sauce":"Same as it always is with the same complaints: too fatty, not enough edge. How hard        can this be to innovate?",
+        "condiments":"Good solid no frills condiments.",
+        "bread":"Fladenbrot, nothing more, nothing less. In other words, quite all right!"
+      },
+      "afters": ["The difference between just being a great alternative when you need a quick snack after a visit to         Club der Visionäre and achieving the status of a five-star establishment is, the Professor believes,                 focus. And not to have arrogant Döner-amateurs at the helm!"]
+    },
     "rating":4,
     "primary_picture": "doyum_1.jpg",
     "secondary_pictures": ["doyum_1.jpg"],
     "coordinates": [
-      13.4400314,
-      52.5006887
+      13.4422542,
+      52.500669
     ]
     },
  {
@@ -89,13 +156,23 @@
     "name": "Doyum",
     "types": ["Veal"],
     "address": {"street":"Admiralstrasse 36-37","zipcode":10999,"area":"Kreuzberg"},
-    "description": "Because Doyum offers the best meat in Berlin",
+    "short_description": "Because Doyum offers the best meat in Berlin",
+    "long_description": {
+      "befores": ["Doyum is possibly Berlin's best Ocakbaci restaurant that also happens to have one of the best         Döners. Ocakbaci is a style of Turkish grill restaurant worth a visit in its own right, particularly                 when it's the best one. (Why not try the Adana Kebab?) Our                 raison d'être, however, is the                 Döners of                the world. Luckily for Doyum, Doyum stands out in this area as well. This is primarily because the                 meat they put into their Döners is superior to all other Döner Imbisses. It is really something."],
+      "structure":{
+        "meat":"No 1 in Berlin. Sometimes the Professor just orders a plate of Döner meat straight up         to feast upon.",
+        "sauce":"The sauce at Doyum is particularly troublesome. This seems strange, because the         Professor suspects every Döner place orders the sauce from the same place. In any case, the                 sauces on display here seem unusually uninteresting and fatty fat, in the Professor's                 reputable opinion.",
+        "condiments":"Really good.  We especially tip our hat to the creative use of the usually rather         boring cabbage.",
+        "bread":"No arguments with the bread."
+      },
+      "afters": ["There are four distinct areas of improvement: The sauce, the sauce, the sauce, the sauce."]
+    },
     "rating":5,
     "primary_picture": "doyum_01-npi.jpg",
     "secondary_pictures": ["doyum_1.jpg","doyum_2.jpg","doyum_02.jpg","doyum_03-npi.jpg","doyum_3.jpg","doyum_4.jpg"],
     "coordinates": [
-      13.4151502,
-      52.4982593
+      13.4174272,
+      52.4981664
     ]
     },
  {
@@ -103,13 +180,24 @@
     "name": "Rüya",
     "types": ["Chicken"],
     "address": {"street":"Hauptstrasse 133","zipcode":10827,"area":"Schöneberg"},
-    "description": "Because it is Berlin chicken döner par excellence",
+    "short_description": "Because it is Berlin chicken döner par excellence",
+    "long_description": {
+      "befores": ["Rüya is an Imbiss in the chicken Gemüse tradition, located deep in Schöneberg. What that means is         chicken Döner with sautéed veggies, fresh fresh veggies, spices & oil, some turkish goat cheese and                a twist of lemon. ",
+                  "Rüya is a special place because it's Berlin's chicken Döner par excellence. Two things are important                  here. Firstly, chicken Döner can work as a great gateway drug to proper Döner appreciation for the                                     uninitiated: It's light, sweet and maintains an (un)healthy illusion of being slightly healthier (?) for                                     you than a veal Döner. Secondly, every travel book and food site will tell you Mustafa's is the best                                     Döner (also a chicken Gemüse Döner). This is not true. It's an easy mistake to make, since Mustafa                                     is indeed a very skilled Döner chef, but Rüya is in the Professor's experience a better choice."],
+      "structure":{
+        "meat":"The meat is fatty and rich in flavors. Being chicken, traditionally known as the lean         meat, it is nothing short of impressive that Rüya have managed to reach such heights.",
+        "sauce":"Same as it ever was, and that means not really that interesting.",
+        "condiments":"Exceptionally good. If the chicken vendors have an edge, in the Professor's         humble opinion, it is really in the field of condiments. They are much more creative as                 compared to their veal compadres.",
+        "bread":"Rüya serves something of a traditional type of bread, resembling what you could         find at a local bakery (but not quite)."
+      },
+      "afters": ["Sometimes, the fatty sauce overpowers the beautiful meats and condiments and then the bread         becomes a bathtub of unelegant mayonnaise-based industrial-strength slop. It was a very nice                 experience up to that point. But afterwards it is not quite as interesting."]
+    },
     "rating":5,
     "primary_picture": "ruya_01.jpg",
     "secondary_pictures": ["ruya_02.jpg","ruya_03-npi.jpg"],
     "coordinates": [
-      13.3517933,
-      52.4847076
+      13.3539881,
+      52.4846884
     ]
     },
  {
@@ -117,13 +205,24 @@
     "name": "Don Kebab",
     "types": ["Marten"],
     "address": {"street":"Knaackstrasse 98","zipcode":10435,"area":"Prenzlauer Berg"},
-    "description": "Because it is a fairly decent Martensdöner",
+    "short_description": "Because it is a fairly decent Martensdöner",
+    "long_description": {
+      "befores": ["A no-frills Marten Döner place. It is included here to illustrate the point that, yes, Marten Döner has        a place in the world and, no, even Marten Döners created with care and attention can't rise above a                 proper Veal Döner. It will at least show it is really, really difficult.",
+                  "Don Kebab is special because despite its inferior meat base the Döner chefs do something fairly                   interesting with the sandwich."],
+      "structure":{
+        "meat":"The meat is the same hot dog Döner meat you'll find (unfortunately according to the         professor) in about 90% of Berlin's Dönerbuden. This meat is by definition inferior to the                 proper veal meat and all but one of respondents to the Professor's personal survey agrees                 upon this. It is really quite the mystery why rational human beings will continue to peddle                 this meat.",
+        "sauce":"Together with the fatty hot dog meat, the fatsplosion sauces actually find their         element. It is not a subtle element but it fits quite nicely together.",
+        "condiments":"Simple no-frills combination of onions, cabbage, tomatoes and some other         items.",
+        "bread":"Classic hard-grilled Fladenbrot."
+      },
+      "afters": ["Why not use the proper veal meat? It's half the dish! Being one of the best Marten experiences         available in Berlin, it is recommended if you happen to be up-and-about Eberswalderstrasse and in                 need of a sudden salt injection. This is the place."]
+    },
     "rating":3,
     "primary_picture": "don_kebab_01.jpg",
     "secondary_pictures": ["don_kebab_01.jpg"],
     "coordinates": [
-      13.412477,
-      52.540324
+      13.4146561,
+      52.5403164
     ]
     }
 ]

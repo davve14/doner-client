@@ -5,7 +5,7 @@
       </h2>
       <v-divider></v-divider>
       <v-layout row wrap mt-2>
-        <v-flex xs12 sm6 md4>
+        <v-flex xs12 sm6 md8>
           <v-card flat class="mr-3">
             <v-card-text>
               <p class="subheading">
@@ -23,14 +23,44 @@
                 <span>{{restaurant.rating}}</span><br>
               <div class="mt-3">
                 <span class="grey--text">
-                  Professor Imbiss:
+                  Professor Imbiss
                 </span><br>
               </div>
-              {{restaurant.description}}
+              <p v-for="before in restaurant.long_description.befores" :key="before">
+                {{before}}
+              </p>
+              <p>
+              <span class="grey--text">
+                Meat:
+              </span>
+              {{restaurant.long_description.structure.meat}}
+              </p>
+              <p>
+              <span class="grey--text">
+                Sauce:
+              </span>
+              {{restaurant.long_description.structure.sauce}}
+              </p>
+              <p>
+              <span class="grey--text">
+                Condiments:
+              </span>
+              {{restaurant.long_description.structure.condiments}}
+              </p>
+              <p>
+              <span class="grey--text">
+                Bread:
+              </span>
+              {{restaurant.long_description.structure.bread}}
+              </p>
+              <p v-for="after in restaurant.long_description.afters" :key="after">
+                {{after}}
+              </p>
             </v-card-text>
           </v-card>
         </v-flex>
         <v-flex xs12 sm6 md4>
+        <v-flex>
           <v-card flat>
             <v-carousel flat height="400">
               <v-carousel-item
@@ -41,12 +71,26 @@
             </v-carousel>
           </v-card>
         </v-flex>
+        <v-flex>
+          <v-card flat class="mt-3">
+            <mapbox
+              access-token="pk.eyJ1IjoiZGF2dmUxNCIsImEiOiJjanFpZjVnYXgwNGF2NDJueHQzZGpoZ3IwIn0.nb0lYF98Ue-7Xt94vgXWkg"
+              :map-options="{
+              style: 'mapbox://styles/davve14/cjqzhkzw52cw92rs1nhiub7xg',
+              center: [restaurant.coordinates[0],restaurant.coordinates[1]],
+              zoom: 14,
+              }"
+              @map-load="mapLoaded"
+            ></mapbox>
+          </v-card>
+        </v-flex>
+        </v-flex>
       </v-layout>
   </v-container>
 </template>
 <script>
 import restaurantsJson from '../../data/restaurants.json'
-
+import Mapbox from 'mapbox-gl-vue';
   export default {
     data: () => ({
         restaurants: restaurantsJson.restaurants,
@@ -58,9 +102,45 @@ import restaurantsJson from '../../data/restaurants.json'
         filterName: '',
         filterAreas: [],
         filterTypes: [],
-        restaurant: {}
+        restaurant: {},
+        filteredGeojson: {}
     }),
+    components: {
+      Mapbox
+    },
     methods: {
+      buildGeoJson(){
+      const newRest = restaurantsJson.restaurants.map(function(restaurant){
+        return {
+          "type": "Feature",
+          "properties": {
+            "title": restaurant.name,
+            "description": restaurant.description,
+            "icon": "doner_marker_grey",
+            "types": restaurant.types,
+            "restId": restaurant.id
+          },
+          "geometry": {
+            "coordinates": restaurant.coordinates,
+            "type": "Point"
+          }
+        }
+      })
+      this.geojson = { "features": newRest, "type": "FeatureCollection" }
+      this.filteredGeojson = { "features": newRest, "type": "FeatureCollection" }
+      },
+      mapLoaded(map) {
+      this.map=map
+        map.addSource('trace', { type: 'geojson', data: this.filteredGeojson })
+        map.addLayer({
+          'id': 'points',
+          'type': 'symbol',
+          'source': 'trace',
+          'layout': {
+            'icon-image': '{icon}'
+          }
+        })
+      },
       condStyle (index) {
         if (this.restaurants[index].rating <= 2) {
           return this.ratingStyle='orange'
@@ -85,6 +165,14 @@ import restaurantsJson from '../../data/restaurants.json'
     },
     beforeMount() {
       this.getRestaurant()
+      this.buildGeoJson()
     }
   }
 </script>
+<style scoped>
+  #map {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+</style>

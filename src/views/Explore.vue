@@ -87,7 +87,7 @@
                     <span class="title mb-0 grey--text text--darken-1">{{restaurant.name}} </span>
                     <v-chip outline small v-for="(type) in restaurant.types" :key="type">{{type}}</v-chip>
                   </v-layout>
-                  <div>{{restaurant.description}}</div>
+                  <div>{{restaurant.short_description}}</div>
                 </div>
               </v-card-title>
             </v-card>
