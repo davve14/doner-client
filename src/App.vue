@@ -26,6 +26,13 @@
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
+        <v-list-tile>
+            <v-list-tile-content>
+              <v-btn right flat href="/about">
+                <span class="font-weight-light">About</span>
+              </v-btn>
+            </v-list-tile-content>
+          </v-list-tile>
       </v-menu>
       <v-toolbar-items>
         <v-btn class="hidden-sm-and-down" right flat href="/">
@@ -74,7 +81,7 @@ export default {
   },
   methods: {
     redirectToSearch () {
-      this.$router.push({path: 'explore', query: { globalFilterName: this.globalFilterName }})
+      this.$router.push({path: '/explore', query: { globalFilterName: this.globalFilterName }})
     }
   },
   watch: {

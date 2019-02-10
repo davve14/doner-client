@@ -43,7 +43,6 @@
 </template>
 
 <script>
-import mapStyle from '../../data/style.json';
 import Mapbox from 'mapbox-gl-vue';
 import MapPopup from '../components/MapPopup.vue'
 import restaurantsJson from '../../data/restaurants.json'
@@ -122,7 +121,7 @@ import restaurantsJson from '../../data/restaurants.json'
       const feature = features[0];
       const popupContent = Vue.extend(MapPopup);
       // Populate the popup and set its coordinates
-      // based on the feature found.
+      // based on the feature found
       const popup = new mapboxgl.Popup({className: 'popups'})
         .setLngLat(feature.geometry.coordinates)
         .setHTML('<div id="vue-popup-content"></div>')

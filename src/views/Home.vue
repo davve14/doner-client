@@ -4,11 +4,13 @@
       <v-layout align-center justify-center>
         <v-flex lg4 md6 xs12>
           <v-card raised>
-            <v-toolbar card>
-              <v-toolbar-title class="hidden-sm-and-down wrap font-weight-light">Find restaurants or simply start
+            <v-toolbar card class="hidden-sm-and-down">
+              <v-toolbar-title class="wrap font-weight-light">Find restaurants or simply start
                 <router-link to="explore">exploring</router-link>
               </v-toolbar-title>
-              <v-toolbar-title class="hidden-md-and-up wrapping font-weight-light">Find restaurants or simply start
+            </v-toolbar>
+            <v-toolbar height="90px" card class="hidden-md-and-up">
+              <v-toolbar-title class="wrapping font-weight-light">Find restaurants or simply start
                 <router-link to="explore">exploring</router-link>
               </v-toolbar-title>
             </v-toolbar>
@@ -18,7 +20,7 @@
               ></v-text-field>
               <v-btn right small flat color="grey" @click="redirectToAdvancedSearch()">
                 <v-icon>search</v-icon>
-                <span class="caption text-capitalize font-weight-light" >Advanced Search</span>
+                <span class="caption text-capitalize font-weight-light">Advanced Search</span>
               </v-btn>
             </div>
           </v-card>

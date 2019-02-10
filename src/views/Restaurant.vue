@@ -1,6 +1,6 @@
 <template>
   <v-container class="grey lighten-4 mt-3 pt-3">
-      <h2 class="grey--text text--darken-1 font-weight-regular">
+      <h2 class="grey--text text--darken-1">
         {{ restaurant.name }}
       </h2>
       <v-divider></v-divider>
@@ -8,21 +8,18 @@
         <v-flex xs12 sm6 md8>
           <v-card flat class="mr-3">
             <v-card-text>
-              <p class="subheading">
-                Imbiß information
-              </p>
-              <span class="grey--text">
+              <span class="grey--text text--darken-1 body-2">
                 Types of meat:
               </span>
               <span v-for="(type, index) in restaurant.types" :key="type">
                   {{type}}<span v-if="index+1 < restaurant.types.length">, </span>
               </span><br>
-              <span class="grey--text">
+              <span class="grey--text text--darken-1 body-2">
                   Professor Imbiss Rating: 
               </span>
                 <span>{{restaurant.rating}}</span><br>
               <div class="mt-3">
-                <span class="grey--text">
+                <span class="grey--text text--darken-1 body-2">
                   Professor Imbiss
                 </span><br>
               </div>
@@ -30,25 +27,25 @@
                 {{before}}
               </p>
               <p>
-              <span class="grey--text">
+              <span class="grey--text text--darken-1 body-2">
                 Meat:
               </span>
               {{restaurant.long_description.structure.meat}}
               </p>
               <p>
-              <span class="grey--text">
+              <span class="grey--text text--darken-1 body-2">
                 Sauce:
               </span>
               {{restaurant.long_description.structure.sauce}}
               </p>
               <p>
-              <span class="grey--text">
+              <span class="grey--text text--darken-1 body-2">
                 Condiments:
               </span>
               {{restaurant.long_description.structure.condiments}}
               </p>
               <p>
-              <span class="grey--text">
+              <span class="grey--text text--darken-1 body-2">
                 Bread:
               </span>
               {{restaurant.long_description.structure.bread}}
@@ -103,7 +100,8 @@ import Mapbox from 'mapbox-gl-vue';
         filterAreas: [],
         filterTypes: [],
         restaurant: {},
-        filteredGeojson: {}
+        filteredGeojson: {},
+        restaurant: {}
     }),
     components: {
       Mapbox
