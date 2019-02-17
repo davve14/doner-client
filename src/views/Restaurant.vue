@@ -14,10 +14,22 @@
               <span v-for="(type, index) in restaurant.types" :key="type">
                   {{type}}<span v-if="index+1 < restaurant.types.length">, </span>
               </span><br>
+              <v-layout class="mt-3">
               <span class="grey--text text--darken-1 body-2">
                   Professor Imbiss Rating: 
               </span>
-                <span>{{restaurant.rating}}</span><br>
+              <v-img v-for="index in restaurant.rating" :key="index"
+                :src="require('../assets/doner_marker_dark_grey_30.svg')"
+                contain
+                height="24px"
+                width="24px"
+                max-width="24px"
+                max-height="24px"
+                position="left left"
+              ></v-img>
+              </v-layout>
+              
+                
               <div class="mt-3">
                 <span class="grey--text text--darken-1 body-2">
                   Professor Imbiss
@@ -100,31 +112,29 @@ import Mapbox from 'mapbox-gl-vue';
         filterAreas: [],
         filterTypes: [],
         restaurant: {},
-        filteredGeojson: {},
-        restaurant: {}
+        filteredGeojson: {}
     }),
     components: {
       Mapbox
     },
     methods: {
       buildGeoJson(){
-      const newRest = restaurantsJson.restaurants.map(function(restaurant){
-        return {
+      const newRest =  [{
           "type": "Feature",
           "properties": {
-            "title": restaurant.name,
-            "description": restaurant.description,
-            "icon": "doner_marker_grey",
-            "types": restaurant.types,
-            "restId": restaurant.id
+            "title": this.restaurant.name,
+            "description": this.restaurant.description,
+            "icon": "doner_marker_dark_grey_30",
+            "types": this.restaurant.types,
+            "restId": this.restaurant.id
           },
           "geometry": {
-            "coordinates": restaurant.coordinates,
+            "coordinates": this.restaurant.coordinates,
             "type": "Point"
           }
-        }
-      })
-      this.geojson = { "features": newRest, "type": "FeatureCollection" }
+        }]
+      
+      console.log(JSON.stringify({ "features": newRest, "type": "FeatureCollection" }))
       this.filteredGeojson = { "features": newRest, "type": "FeatureCollection" }
       },
       mapLoaded(map) {

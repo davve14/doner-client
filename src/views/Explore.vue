@@ -115,11 +115,11 @@ import restaurantsJson from '../../data/restaurants.json'
     methods: {
       condStyle (index) {
         if (this.restaurants[index].rating <= 2) {
-          return this.ratingStyle='orange'
+          return this.ratingStyle='accent'
         } else if (this.restaurants[index].rating <= 3) {
-          return this.ratingStyle='yellow'
+          return this.ratingStyle='warning'
         } else if (this.restaurants[index].rating >= 4) {
-          return this.ratingStyle='green'
+          return this.ratingStyle='success'
         } else {
           return this.ratingStyle='black'
         }

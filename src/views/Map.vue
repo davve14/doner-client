@@ -77,7 +77,7 @@ import restaurantsJson from '../../data/restaurants.json'
           "properties": {
             "title": restaurant.name,
             "description": restaurant.description,
-            "icon": "doner_marker_grey",
+            "icon": "doner_marker_dark_grey_30",
             "types": restaurant.types,
             "restId": restaurant.id
           },

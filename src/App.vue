@@ -48,7 +48,8 @@
       <v-btn class="font-weight-light" to="/explore" flat>Explore</v-btn>
       <v-btn class="font-weight-light" to="/map" flat>Map</v-btn>
       <v-btn class="font-weight-light" to="/about" flat>About</v-btn>
-      <v-text-field append-icon="search" clearable @keyup.enter="redirectToSearch()" v-model="globalFilterName" class="mt-1 ml-5 font-weight-light"
+      <v-text-field append-icon="search" clearable @keyup.enter="redirectToSearch()" v-model="globalFilterName" 
+        class="mt-1 ml-5 font-weight-light"
         label="Imbiß search"
       ></v-text-field>
     </v-toolbar-items>
