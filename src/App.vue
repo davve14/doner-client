@@ -85,6 +85,8 @@ export default {
       this.$router.push({path: '/explore', query: { globalFilterName: this.globalFilterName }})
     }
   },
+  beforeMount() {
+  },
   watch: {
     '$route' (to, from) {
     }
