@@ -16,8 +16,8 @@
             </v-toolbar>
             <div class="ma-4">
               <v-text-field @keyup.enter="redirectToSearch()" v-model="globalFilterName" class="font-weight-light"
-                label="Search by Imbiß name"
-              ></v-text-field>
+                label="Search by Imbiß name">
+              </v-text-field>
               <v-btn right small flat color="grey" @click="redirectToAdvancedSearch()">
                 <v-icon>search</v-icon>
                 <span class="caption text-capitalize font-weight-light">Advanced Search</span>
@@ -31,18 +31,29 @@
 </template>
 <script>
   export default {
-    data () {
-    return {
-      globalFilterName: ''
-    }
+    data() {
+      return {
+        globalFilterName: ''
+      }
     },
     methods: {
-    redirectToSearch () {
-      this.$router.push({path: 'explore', query: { globalFilterName: this.globalFilterName }})
-    },
-    redirectToAdvancedSearch () {
-      this.$router.push({path: 'explore', query: { globalFilterName: this.globalFilterName, globalShowFilters: true  }})
-    }
+      redirectToSearch() {
+        this.$router.push({
+          path: 'explore',
+          query: {
+            globalFilterName: this.globalFilterName
+          }
+        })
+      },
+      redirectToAdvancedSearch() {
+        this.$router.push({
+          path: 'explore',
+          query: {
+            globalFilterName: this.globalFilterName,
+            globalShowFilters: true
+          }
+        })
+      }
     }
   }
 </script>

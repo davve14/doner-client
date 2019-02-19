@@ -2,14 +2,24 @@
 <div>
     <v-card flat class="mr-2 mt-2 ml-1" :href="/restaurant/ + restaurantId">
             <v-card-title primary-title class="pa-1">
-                <span class="font-weight-light title mt-0 mb-0 grey--text text--darken-1">{{restaurantTitle}}</span><br> 
+                <span class="title mt-0 mb-0 grey--text text--darken-1">{{restaurantTitle}}</span><br> 
             </v-card-title>
             <v-card-actions class="py-2 px-1">
-                <v-container class="px-1 py-0">    
+                
+                <v-container class="px-1 py-0">
                     <v-layout>
+                        <v-img
+                            :src="require('@/assets/'+restaurant.primary_picture)"
+                            aspect-ratio="2"
+                            width="200px"
+                        ></v-img>
+                    </v-layout>
+                    <v-layout  align-center row class="pt-1">
+                       <span class="font-weight-thin grey--text subheading  text--darken-1">Types: </span>
                         <v-chip outline small v-for="(type) in restaurantTypes" >{{type}}</v-chip>
                     </v-layout>
-                    <v-layout>
+                    <v-layout  align-center row  class="pt-1">
+                        <span class="font-weight-light grey--text subheading  text--darken-1">Rating: </span>
                         <v-img v-for="index in restaurant.rating" :key="index"
                         :src="require('../assets/doner_marker_dark_grey_30.svg')"
                         contain
