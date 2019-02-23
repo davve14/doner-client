@@ -42,7 +42,7 @@
             </div>
             <div class="headline grey--text text--darken-1">Results</div>
             <v-layout row wrap>
-                <v-flex class="bell" xs12 sm6 md4 v-for="(restaurant,index) in filteredRestaurants" :key="restaurant.id">
+                <v-flex class="bell" xs12 sm6 md4 v-for="(restaurant) in filteredRestaurants" :key="restaurant.id">
                     <v-card class="mr-3 my-2 ml-1" :href="/restaurant/ + restaurant.id">
                         <v-img :src="require('@/assets/'+restaurant.primary_picture)" aspect-ratio="2"></v-img>
                         <div class="bellnumbersleft">

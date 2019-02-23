@@ -118,11 +118,6 @@ export default {
                     "type": "Point"
                 }
             }]
-
-            console.log(JSON.stringify({
-                "features": newRest,
-                "type": "FeatureCollection"
-            }))
             this.filteredGeojson = {
                 "features": newRest,
                 "type": "FeatureCollection"

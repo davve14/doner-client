@@ -6,14 +6,14 @@
         <v-list>
           <v-list-tile>
             <v-list-tile-content>
-              <v-btn right flat href="/">
+              <v-btn right flat href="/home">
                 <span class="font-weight-light">Home</span>
               </v-btn>
             </v-list-tile-content>
           </v-list-tile>
           <v-list-tile>
             <v-list-tile-content>
-              <v-btn right flat href="/explore">
+              <v-btn right flat href="/">
                 <span class="font-weight-light">Explore</span>
               </v-btn>
             </v-list-tile-content>
@@ -35,17 +35,17 @@
           </v-list-tile>
       </v-menu>
       <v-toolbar-items>
-        <v-btn class="hidden-sm-and-down" right flat href="/">
+        <v-btn class="hidden-sm-and-down" right flat href="/home">
         <span class="headline">Berlin</span>
         <span class="headline font-weight-light">&nbsp;Döner Database</span>
         </v-btn>
-        <v-btn class="hidden-md-and-up" right flat href="/">
+        <v-btn class="hidden-md-and-up" right flat href="/home">
         <span class="headline">BERLIN</span>
         <span class="headline font-weight-light">&nbsp;Döner DB</span>
         </v-btn>
       </v-toolbar-items>
     <v-toolbar-items class="ml-5 hidden-sm-and-down">
-      <v-btn class="font-weight-light" to="/explore" flat>Explore</v-btn>
+      <v-btn class="font-weight-light" to="/" flat>Explore</v-btn>
       <v-btn class="font-weight-light" to="/map" flat>Map</v-btn>
       <v-btn class="font-weight-light" to="/about" flat>About</v-btn>
       <v-text-field append-icon="search" clearable @keyup.enter="redirectToSearch()" v-model="globalFilterName" 
