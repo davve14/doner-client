@@ -3,11 +3,68 @@
         <v-container style="max-width: 960px;">
             <h1 class="headline">About The Berlin Döner Database</h1>
             <p>
+                My name is Professor Imbiss, I am a Döner connoisseur and I want to tell you about our project, The
+                International Berlin Döner Database.
+            </p>
+            <p>
+                The Döner or Kebab or Gyros or simply ”meat and/or veggeis in a Sandwich” is a dish common in
+                the urban landscape of Berlin. Where the concept of Döner starts and stops is hard these days since
+                the concept entails several different components by this point. But let's start at the beginning.
+            </p>
+            <p>
+                Döner or Döner kebab is traditionally a Turkish dish made up of meat cooked on a rotisserie (slow
+                grill). The type of meat and composure of the meat can vary. The exact differences between Döner,
+                Gyros or Schawarma kebab are not as easy to detail as one may think. Usually, Gyros tends to go
+                with tzatziki and Schawarma tends to pertain to minced and seasoned meat.
+            </p>
+            <p>
+                So, dear reader, in my opinion it's mostly a matter of semantics and regional preferences. For the
+                sake of this interactive blog, however, we'll focus on Döner and how Professor Imbiss (yours truly)
+                perceives this term is used in Berlin.
+            </p>
+            <p>
+                Alright, got lost a bit there. So, traditionally Döner kebab is meat cooked rotisserie-style on a
+                skewer. The meat is then cut off the skewer into thin, crisp shavings. The thin shavings can then be
+                used in a variety of dishes. This is where we get back to Berlin. The most common street food in
+                Berlin is probably the Döner im Brot (which is German for deliciousness... oh, and ”Döner in
+                bread”). The bread is most commonly the Fladenbrot, according to my studies.
+            </p>
+            <p>
+                The combination of the meat and the bread makes a delicious sandwich which no human being can
+                claim to have lived a life without having tasted. It's simple and it's delicious. And it can be even
+                better. I guess this is one of the major drivers for us here at the International Berlin Döner
+                Database:
+                to probe the Döner makers of the world to even greater heights through the Internet's informational
+                powers.
+            </p>
+            <p>
+                The Imbiss is a German concept and it's a small restaurant. Sometime little more than a hot dog
+                stand, sometimes closer to a restaurant. What they have in common is a tasty (hopefully) meal for a
+                small amount of cash. It is, in essence, a tasty treat for a tiny sum.
+            </p>
+            <p>
+                At the International Berlin Döner Database we believe there's something particularly beautiful
+                about making delicious meals at affordable prices. This is why we've choosen to applaud this
+                specific type of food outlet.
+            </p>
+            <p>
+                Last but certainly not least, Döner is traditionally a meat dish. In recent years the concept of
+                ”Döner” has broadened and now includes vegetarian options, which we also applaud at the
+                International Berlin Döner Database. I, Professor Imbiss, has great concerns for several things at the
+                same time: your tastebuds, your stomach, your wallet
+                and
+                the planet. Now, these are not mutually
+                exclusive. There's nothing wrong with having a tasty Veal döner. B
+                UT, please remember there's
+                nothing un-tasty with having a vegetarian option at class-acts like Zweistrom or Vöner.
+            </p>
+            <h1 class="headline">About the structures of a Döner and meat varieties</h1>
+            <p>
                 Since the definitions of what is a Döner kebab can vary so very much, we had a workshop here at
                 the International Berlin Döner Database and came up with a couple of categories that make the
                 description of the dishes easier. You can read all about it right here!
             </p>
-            <h2 class="title">About Veal Döner</h2>
+            <h2 class="title">Veal Döner</h2>
             <v-layout row wrap>
                 <v-flex xs12 md6>
                     The Veal döner pivots around the veal meat, which, in turn, pivots around a skewer while being
@@ -36,7 +93,7 @@
                     </figure>
                 </v-flex>
             </v-layout>
-            <h2 class="title">About Mârten Döner</h2>
+            <h2 class="title">Mârten Döner</h2>
             <p>
                 The Mârten Döner is named after the traditional autumn festivities in Värmland, a province in
                 western Sweden. It is named so because the Döner meat is, as it is with the Döner meat offered by
@@ -53,7 +110,7 @@
                 than three in our system. That being said, there's nothing wrong with a tasty Mârten Döner,
                 particurly when waking up parched after a heavy night of drinking. The fatty meats will deliver the
                 salt your body craves! But please do your research beforehand.</p>
-            <h2 class="title">About Chicken Döner</h2>
+            <h2 class="title">Chicken Döner</h2>
             <v-layout row wrap>
                 <v-flex xs12 md6>
                     <figure class="figure_wrapp">
@@ -79,7 +136,7 @@
                 </v-flex>
             </v-layout>
             <br>
-            <h2 class="title">About Falafel</h2>
+            <h2 class="title">Falafel</h2>
             <p>
                 Falafel is 100% vegan and consists of a deep fried ball of chick peas, fava beans or both. It's a
                 traditional middle-eastern food which traces its origin back to Egypt from where it migrated north
@@ -97,7 +154,7 @@
                 Falafel isn't really Döner since that is, as previously discussed, meat cooked slowly on a skewer and
                 Falafel isn't even meat. Falafel is, however, a lovely tasty dish supplied by several imbisses and that
                 is what matters to us. Try, for example, Zweistrom.</p>
-            <h2 class="title">About veggies</h2>
+            <h2 class="title">veggies</h2>
             <p>
                 Veggie Döners can take about any shape. I mean, in part the Falafel is a vegetarian type of
                 vegetarian Döner. But that type of sandwich has been honored with its own category. So here we'll

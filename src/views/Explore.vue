@@ -111,16 +111,13 @@ import restaurantsJson from '../../data/restaurants.json'
         }
       },
       filterRestaurants() {
-        
-        let filtered = this.restaurants.filter((obj) => { return obj.name.toLowerCase().match(this.filterName.toLowerCase()) })
-        
+        let filtered = this.restaurants.filter((obj) => { return obj.name.toLowerCase().match(this.filterName.toLowerCase()) })  
         if(this.filterAreas.length > 0 ) {
           filtered = filtered.filter((obj) => { return this.filterAreas.some(filterArea => obj.address.area.match(filterArea)) })
         }
         if(this.filterTypes.length > 0 ) {
           filtered = filtered.filter((obj) => { return this.filterTypes.some(filterType => obj.types.some(type => filterType.match(type))) })
         }
-
         this.filteredRestaurants = filtered
       },
       clearFilters(){
@@ -155,15 +152,7 @@ import restaurantsJson from '../../data/restaurants.json'
     }
   }
 </script>
-
 <style>
-
-.bellnumbersright{
-position: absolute;
-    top: 0px;
-    right: 10px;
-}
-
 .bellnumbersleft{
 position: absolute;
     top: -15px;
@@ -172,6 +161,5 @@ position: absolute;
 .bell{
     position: relative;
 }
-
 </style>
 

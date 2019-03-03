@@ -33,6 +33,13 @@
               </v-btn>
             </v-list-tile-content>
           </v-list-tile>
+          <v-list-tile>
+            <v-list-tile-content>
+              <v-btn right flat href="/contact">
+                <span class="font-weight-light">Contact us</span>
+              </v-btn>
+            </v-list-tile-content>
+          </v-list-tile>
       </v-menu>
       <v-toolbar-items>
         <v-btn class="hidden-sm-and-down" right flat href="/home">
@@ -57,8 +64,7 @@
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn
         flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
+        to="/contact"
       >
       <v-icon left>email</v-icon><span class="hidden-sm-and-down font-weight-light">Contact us</span>
       </v-btn>
