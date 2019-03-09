@@ -80,6 +80,7 @@ export default {
     }),
     methods: {
         submit(){
+            console.log(process.env.VUE_APP_SENDMAIL_API_URL)
             let headers = {
                 "Content-Type": "application/json"
             }
