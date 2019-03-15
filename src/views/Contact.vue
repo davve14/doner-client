@@ -80,13 +80,12 @@ export default {
     }),
     methods: {
         submit(){
-            console.log(process.env.VUE_APP_SENDMAIL_API_URL)
             let headers = {
                 "Content-Type": "application/json"
             }
             if(this.$refs.form.validate()){
                 axios
-                    .post('https://doner-server.herokuapp.com/sendmail', {
+                    .post(process.env.VUE_APP_SENDMAIL_API_URL, {
                         "name":this.name,
                         "email":this.email,
                         "message":this.message
