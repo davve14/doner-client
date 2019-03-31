@@ -91,6 +91,11 @@ import restaurantsJson from '../../data/restaurants.json'
       this.filteredGeojson = { "features": newRest, "type": "FeatureCollection" }
       },
       runFilterTypes(){
+        if(this.filterTypes.length===0){
+          this.buildGeoJson()
+          this.map.getSource('trace').setData(this.filteredGeojson)
+        }
+        else{
         var filterer = this.filterTypes
         var filtered = this.geojson.features.filter(function(feature){
           return feature.properties.types.some(function(type){
@@ -100,7 +105,8 @@ import restaurantsJson from '../../data/restaurants.json'
           })
         })
         this.filteredGeojson = { "features": filtered, "type": "FeatureCollection" }
-        this.map.getSource('trace').setData(this.filteredGeojson);
+        this.map.getSource('trace').setData(this.filteredGeojson)
+        }
       },
     mapClicked(map, e) {
       this.addPopUp(map, e);

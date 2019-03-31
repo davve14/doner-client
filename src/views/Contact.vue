@@ -1,50 +1,23 @@
 <template>
     <div>
+        <v-snackbar v-model="snackbar" :bottom="y === 'bottom'" :left="x === 'left'" :multi-line="mode === 'multi-line'"
+            :right="x === 'right'" :timeout="timeout" :top="y === 'top'" :vertical="mode === 'vertical'">
+            {{ snackbartext }}
+            <v-btn color="primary" flat @click="snackbar = false">
+                Close
+            </v-btn>
+        </v-snackbar>
+        <v-progress-linear v-if="progress" indeterminate color="primary"></v-progress-linear>
         <v-container class="grey lighten-4 mt-3 pt-3" style="max-width: 960px;">
             <h1 class="headline">Contact The Berlin Döner Database</h1>
             <v-form class='pt-4' ref="form">
-                <v-text-field
-                    v-model="name"
-                    :counter="40"
-                    label="Your name"
-                    required
-                    :rules='nameRules'
-                ></v-text-field>
-                <v-text-field
-                    v-model="email"
-                    label="Optional e-mail"
-                    :rules="emailRules"
-                    clearable
-                ></v-text-field>
-                <v-textarea
-                    v-model="message"
-                    label="Your message"
-                    required
-                    :rules="textareaRules"
-                ></v-textarea>
+                <v-text-field v-model="name" :counter="40" label="Your name" required :rules='nameRules'></v-text-field>
+                <v-text-field v-model="email" label="Optional e-mail" :rules="emailRules" clearable></v-text-field>
+                <v-textarea v-model="message" label="Your message" required :rules="textareaRules"></v-textarea>
                 <v-btn class='primary' flat @click="submit">submit</v-btn>
                 <v-btn class='accent' flat @click="clear">clear</v-btn>
             </v-form>
         </v-container>
-        <v-snackbar
-            v-model="snackbar"
-            :bottom="y === 'bottom'"
-            :left="x === 'left'"
-            :multi-line="mode === 'multi-line'"
-            :right="x === 'right'"
-            :timeout="timeout"
-            :top="y === 'top'"
-            :vertical="mode === 'vertical'"
-            >
-            {{ snackbartext }}
-            <v-btn
-                color="primary"
-                flat
-                @click="snackbar = false"
-                >
-                Close
-            </v-btn>
-        </v-snackbar>
     </div>
 </template>
 <script>
@@ -76,10 +49,12 @@ export default {
         x: null,
         timeout: 6000,
         snackbartext: '',
+        progress: false,
         mode:''
     }),
     methods: {
         submit(){
+            this.progress=true
             let headers = {
                 "Content-Type": "application/json"
             }
@@ -93,12 +68,15 @@ export default {
                     .then(response => {
                         this.info = response
                         this.snackbartext = 'Message sent'
+                        this.progress=false
                         this.snackbar = true
                         })
                     .catch(e => {
                         this.errors.push(e)
                         this.snackbartext = ''+e
+                        this.progress=false
                         this.snackbar = true
+
                     })
             }
         },
