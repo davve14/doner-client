@@ -6,12 +6,12 @@
           <v-card raised>
             <v-toolbar card class="hidden-sm-and-down">
               <v-toolbar-title class="wrap font-weight-light">Find restaurants or simply start
-                <router-link to="explore">exploring</router-link>
+                <router-link to="/">exploring</router-link>
               </v-toolbar-title>
             </v-toolbar>
             <v-toolbar height="90px" card class="hidden-md-and-up">
               <v-toolbar-title class="wrapping font-weight-light">Find restaurants or simply start
-                <router-link to="explore">exploring</router-link>
+                <router-link to="/">exploring</router-link>
               </v-toolbar-title>
             </v-toolbar>
             <div class="ma-4">
@@ -39,7 +39,7 @@
     methods: {
       redirectToSearch() {
         this.$router.push({
-          path: 'explore',
+          path: '/',
           query: {
             globalFilterName: this.globalFilterName
           }
@@ -47,7 +47,7 @@
       },
       redirectToAdvancedSearch() {
         this.$router.push({
-          path: 'explore',
+          path: '/',
           query: {
             globalFilterName: this.globalFilterName,
             globalShowFilters: true

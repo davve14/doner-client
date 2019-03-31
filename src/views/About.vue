@@ -89,7 +89,7 @@
                     <figure class="figure_wrapp">
                         <v-img :src="require('@/assets/tadim_spett.png')" width="400" aspect-ratio="1" alt="Tadim Döner">
                         </v-img>
-                        <figcaption>Tadim - Veal Döner in Berlin, Kreuzberg</figcaption>
+                        <figcaption><router-link to="/restaurant/1">Tadim</router-link> - Veal Döner in Berlin Kreuzberg</figcaption>
                     </figure>
                 </v-flex>
             </v-layout>
@@ -116,7 +116,7 @@
                     <figure class="figure_wrapp">
                         <v-img :src="require('@/assets/ruya_spett.png')" width="400" aspect-ratio="1" alt="Tadim Döner">
                         </v-img>
-                        <figcaption>Rüya Gemüse Kebab - Chicken Döner in Berlin, Schöneberg</figcaption>
+                        <figcaption><router-link to="/restaurant/6">Rüya Gemüse Kebab</router-link> - Chicken Döner in Berlin Schöneberg</figcaption>
                     </figure>
                 </v-flex>
                 <v-flex xs12 md6>
@@ -154,7 +154,7 @@
                 Falafel isn't really Döner since that is, as previously discussed, meat cooked slowly on a skewer and
                 Falafel isn't even meat. Falafel is, however, a lovely tasty dish supplied by several imbisses and that
                 is what matters to us. Try, for example, Zweistrom.</p>
-            <h2 class="title">veggies</h2>
+            <h2 class="title">Veggies</h2>
             <p>
                 Veggie Döners can take about any shape. I mean, in part the Falafel is a vegetarian type of
                 vegetarian Döner. But that type of sandwich has been honored with its own category. So here we'll

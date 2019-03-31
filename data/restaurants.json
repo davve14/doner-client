@@ -7,7 +7,7 @@
     "address": {"street":"Luxemburgerstrasse 1","zipcode":13353,"area":"Wedding"},
     "short_description": "First class meat, great bread, tiny amounts of sauce and great döner chefs",
     "long_description": {
-      "befores": ["Pamfilya is a Ocakbaci (Turkish grill restaurant) located in north Wedding far from the fancy, edgy         blocks you, dear potential visitor, probably frequents. But why not put in a visit to something                 different? Pamfilya is worth the trip.",
+      "befores": ["Pamfilya is an Ocakbaci (Turkish grill restaurant) located in north Wedding far from the fancy, edgy         blocks you, dear potential visitor, probably frequents. But why not put in a visit to something                 different? Pamfilya is worth the trip.",
                   "Pamfilya offers a simple and tasty no-frills veal Döner with some of Berlin's best meats. According                   to the Professor this is how every Döner in Berlin could & should taste. A special slow clap goes                                     out to their chefs who appreciate the accute un-need for the fatty tasteless sauce when 1) the meat is                                    of proper quality, 2) and grilled properly, 3) the bread is paper-thin, and 4) the condiments are in                                     just the right proportions to the amount of meat.",
                   "At this particular taste juncture very little sauce is needed. One of the talents at Pamfilya personally                   demonstrated this to the Professor, adding just a minor touch of sauce  and some chili flakes.                                     Perfection.",
                   "On a general note, when at its best the meat will provide most (if not all) of the moisture in the dish.                  When meat is sterling, you theoretically only need some seasoning. The professor could go off at                                     lenghts here, paraphrasing a lecture given by Hestor Blumenthal about this very subject. But we                                     will save that for another day."],
@@ -19,7 +19,7 @@
       },
       "afters": ["Consistency of the Döner delivery. Sometimes the Professor goes into fits of joy outside this         vendor, wiping a tear over the fantastic quality of this Döner. Other times, though, it's a bit meh. All                that is needed is here though."]
     },
-    "rating":5,
+    "rating":4,
     "primary_picture": "pamfilya_01.jpg",
     "secondary_pictures": ["pamfilya_02.jpg","pamfilya_03-npi-b.jpg","pamfilya_03-npi.jpg"],
     "coordinates": [
@@ -94,7 +94,7 @@
       },
       "afters": ["In the Falalfel game there's really little room for improvement in the Professor's opinion. The Professor dares anyone to challenge that assumption though! However, someday the Professor will schedule time to try the Schawarma offered here and see if it's as delicous as the Falafel. It will be of particular interest to see if it offers a cure to fatty mayonnaise-based sauces of all the Döner Imbisses."]
     },
-    "rating":5,
+    "rating":4,
     "primary_picture": "zweistrom_01-npi.jpg",
     "secondary_pictures": ["zweistrom_02-npi.jpg"],
     "coordinates": [
@@ -118,7 +118,7 @@
       },
       "afters": ["While Vöner is a favourite of the Professor's, there are countless ways you could develop this         concept. You could, for example, look at Rutabaga (of Mathias Dahlgren fame) for inspriation on                 variations of different bases and sauces to build the sandwich around."]
     },
-    "rating":4,
+    "rating":3,
     "primary_picture": "voner_01-npi.jpg",
     "secondary_pictures": ["voner_02-npi.jpg"],
     "coordinates": [
@@ -192,7 +192,7 @@
       },
       "afters": ["Sometimes, the fatty sauce overpowers the beautiful meats and condiments and then the bread         becomes a bathtub of unelegant mayonnaise-based industrial-strength slop. It was a very nice                 experience up to that point. But afterwards it is not quite as interesting."]
     },
-    "rating":5,
+    "rating":4,
     "primary_picture": "ruya_01.jpg",
     "secondary_pictures": ["ruya_02.jpg","ruya_03-npi.jpg"],
     "coordinates": [
@@ -217,7 +217,7 @@
       },
       "afters": ["Why not use the proper veal meat? It's half the dish! Being one of the best Marten experiences         available in Berlin, it is recommended if you happen to be up-and-about Eberswalderstrasse and in                 need of a sudden salt injection. This is the place."]
     },
-    "rating":3,
+    "rating":2,
     "primary_picture": "don_kebab_01.jpg",
     "secondary_pictures": ["don_kebab_01.jpg"],
     "coordinates": [

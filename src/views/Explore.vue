@@ -3,7 +3,7 @@
         <v-container class="grey lighten-4 mt-3 pt-3">
             <v-btn right small flat color="grey" @click="showFilters = !showFilters">
                 <v-icon>filter_list</v-icon>
-                <span class="caption text-capitalize">Filter</span>
+                <span class="caption text-capitalize">Advanced Search</span>
                 <v-icon>{{ showFilters ? 'arrow_drop_up' : 'arrow_drop_down' }}</v-icon>
             </v-btn>
             <div v-show="showFilters">
@@ -50,7 +50,7 @@
                                 <v-badge color="primary" slot="activator">
                                     <span slot="badge">{{restaurant.id}}</span>
                                 </v-badge>
-                                <span>Professor Imbiß rating</span>
+                                <span>Professor Imbiß top list position</span>
                             </v-tooltip>
                         </div>
                         <v-card-title primary-title>
@@ -63,7 +63,7 @@
                                     <v-img v-for="index in restaurant.rating" :key="index" :src="require('../assets/doner_marker_dark_grey_30.svg')"
                                         contain height="24px" width="24px" max-width="24px" max-height="24px" position="left left"></v-img>
                                 </v-layout>
-                                <div>{{restaurant.short_description}}</div>
+                                <div>{{restaurant.short_description | snippet}}</div>
                             </div>
                         </v-card-title>
                     </v-card>
@@ -111,7 +111,11 @@ import restaurantsJson from '../../data/restaurants.json'
         }
       },
       filterRestaurants() {
-        let filtered = this.restaurants.filter((obj) => { return obj.name.toLowerCase().match(this.filterName.toLowerCase()) })  
+        let filtered = this.restaurants.filter((obj) => {
+          return obj.name.toLowerCase().match(this.filterName.toLowerCase())
+          || Vue.filter('no-diacs')(obj.name.toLowerCase()).match(this.filterName.toLowerCase())
+          }
+        )  
         if(this.filterAreas.length > 0 ) {
           filtered = filtered.filter((obj) => { return this.filterAreas.some(filterArea => obj.address.area.match(filterArea)) })
         }
